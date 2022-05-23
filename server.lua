@@ -18,6 +18,7 @@ QBCore.Commands.Add("dev", "Enable/Disable developer Mode", {}, false, function(
 end, 'admin')
 
 RegisterNetEvent('hud:server:GainStress', function(amount)
+    if Config.StressDisabled then return end
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local newStress
@@ -40,6 +41,7 @@ RegisterNetEvent('hud:server:GainStress', function(amount)
 end)
 
 RegisterNetEvent('hud:server:RelieveStress', function(amount)
+    if Config.StressDisabled then return end
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local newStress
