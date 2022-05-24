@@ -1132,15 +1132,15 @@ CreateThread(function()
                         action = 'update',
                         value = heading
                     })
-                    updateBaseplateHud({
-                        show,
-                        crossroads[1],
-                        crossroads[2],
-                        Menu.isCompassShowChecked,
-                        Menu.isShowStreetsChecked,
-                        Menu.isPointerShowChecked,
-                        Menu.isDegreesShowChecked,
-                    })
+--                     updateBaseplateHud({
+--                         show,
+--                         crossroads[1],
+--                         crossroads[2],
+--                         Menu.isCompassShowChecked,
+--                         Menu.isShowStreetsChecked,
+--                         Menu.isPointerShowChecked,
+--                         Menu.isDegreesShowChecked,
+--                     })
 			    else
                     if Menu.isOutCompassChecked then
                         SendNUIMessage ({
