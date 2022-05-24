@@ -1071,25 +1071,25 @@ end
 
 local prevBaseplateStats = { nil, nil, nil, nil, nil, nil, nil}
 
-local function updateBaseplateHud(data)
-    local shouldUpdate = false
-    for k, v in pairs(data) do
-        if prevBaseplateStats[k] ~= v then shouldUpdate = true break end
-    end
-    prevBaseplateStats = data
-    if shouldUpdate then
-        SendNUIMessage ({
-            action = 'baseplate',
-            show = data[1],
-            street1 = data[2],
-            street2 = data[3],
-            showCompass = data[4],
-            showStreets = data[5],
-            showPointer = data[6],
-            showDegrees = data[7],
-        })
-    end
-end
+-- local function updateBaseplateHud(data)
+--     local shouldUpdate = false
+--     for k, v in pairs(data) do
+--         if prevBaseplateStats[k] ~= v then shouldUpdate = true break end
+--     end
+--     prevBaseplateStats = data
+--     if shouldUpdate then
+--         SendNUIMessage ({
+--             action = 'baseplate',
+--             show = data[1],
+--             street1 = data[2],
+--             street2 = data[3],
+--             showCompass = data[4],
+--             showStreets = data[5],
+--             showPointer = data[6],
+--             showDegrees = data[7],
+--         })
+--     end
+-- end
 
 local lastCrossroadUpdate = 0
 local lastCrossroadCheck = {}
